@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    background: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.nav-links a:hover {
+    color: #ff4081;
+}
+
+.nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #ff4081;
+}
+
+/* Slideshow container */
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 700px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Individual slide styles */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Active slide */
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* Image Section */
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Animation */
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+          /* Simple Heading Styles */
+    h2 {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        color: #333; /* Neutral text color */
+        border-bottom: 2px solid #ff6f61; /* Subtle bottom border */
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+        /* Price styles */
+        .price {
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            color: #000; /* Black color for prices */
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* Image Section */
+        .image-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .image-section div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px; /* Larger image container */
+        }
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the images */
+        }
+        .price {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 5px;
+}
+
+.original-price {
+    font-size: 14px;
+    color: #777; /* Muted color for the original price */
+}
+
+.discount {
+    font-size: 14px;
+    color: #28a745; /* Green color for the discount */
+    font-weight: bold;
+    background-color: #d4edda; /* Light green background for visibility */
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
